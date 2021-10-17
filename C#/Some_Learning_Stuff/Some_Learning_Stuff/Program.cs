@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Some_Learning_Stuff
 {
     class Program
@@ -12,23 +13,26 @@ namespace Some_Learning_Stuff
 
         static void Main(string[] args)
         {
-            Translator tr = new Translator();
-            Translator.InitializeDictionary();
+            Namechecking nameChecking = new Namechecking();
+            NumberOperations numberOperations = new NumberOperations();
+            Games games = new Games();
+            Stringoperations stringoperations = new Stringoperations();
+
 
             Console.WriteLine(
-                "1 = HelloWorld + check if Bob or Alice\n" +
-                "2 = Wypisywanie liczb \n" +
-                "3 = Tabliczka mnozeni \n" +
-                "4 = Liczby Pierwsze \n" +
-                "5 = Gra w pytanie \n" +
-                "6 = 6 = Dni przestepne \n" +
-                "7 = Max int in array \n" +
-                "8 = reverse string \n" +
-                "9 = element in string \n" +
-                "10 = odd elements in array \n" +
-                "11 = sum of an array \n" +
-                "12 = check Palindrome! \n" +
-                "13 = square of numbers! \n" +
+                "1 = HelloWorld + Sprawdz czy imie to Bob lub Alice\n" +
+                "2 = Wypisywanie liczb po kolei do numeru \n" +
+                "3 = Tabliczka mnozeni (TOFIX) \n" +
+                "4 = Liczby Pierwsze do podanej liczby \n" +
+                "5 = Zgadnij Liczbe \n" +
+                "6 = Dni przestepne \n" +
+                "7 = Najwieksza liczba w szeregu \n" +
+                "8 = Odwroc slowo \n" +
+                "9 = Czy cos istnieje w szeregu \n" +
+                "10 = Co 2 Liczba w szeregu \n" +
+                "11 = Suma szeregu \n" +
+                "12 = Sprawdz czy cos jest palindromem \n" +
+                "13 = Kwadraty liczb \n" +
                 "14 = Alternate strings \n" +
                 "15 = Alternate Sorted String \n" +
                 "16 = Obrót Stringa \n" +
@@ -51,305 +55,59 @@ namespace Some_Learning_Stuff
             Int32.TryParse(Console.ReadLine(), out int funkcja);
             switch (funkcja)
             {
-
-                case 1:
-                    Console.Clear();
-                    Console.WriteLine("Hello World!");
-
-                    String WhatName;
-                    WhatName = ("ss");
-
-                    Console.WriteLine("What's Your name?");
-                    WhatName = Console.ReadLine();
-
-                    if ((WhatName == "Bob") || (WhatName == "Alice"))
-                    {
-                        Console.WriteLine("Hello " + WhatName + "!");
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                case 1:                    
+                    Namechecking.CheckName();
                     break;
-
 
                 case 2:
-
-                    // ------------------------- Wypisywanie 1 + n
-                    Console.Clear();
-                    Console.WriteLine("Podaj Liczbe");
-                    int Secret;
-
-                    Secret = 1;
-                    Int32.TryParse(Console.ReadLine(), out Secret);
-
-                    for (int i = 0; i <= Secret; i++)
-                    {
-                        Console.WriteLine(i + " ");
-                        System.Threading.Thread.Sleep(10);
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    NumberOperations.Iteration();
                     break;
-
 
                 case 3:
-                    // ------------------------- tabliczka mnozenia
-                    int Koniecmnozenia = 0;
-                    int PoczatekMnozenia = 0;
-                    Console.Clear();
-
-                    Console.WriteLine("od jakiej liczby chcesz zaczac tabliczke mnozenia?");
-                    Int32.TryParse(Console.ReadLine(), out Koniecmnozenia);
-
-                    Console.WriteLine("jak duża chcesz tabliczke mnozenia?");
-                    Int32.TryParse(Console.ReadLine(), out PoczatekMnozenia);
-
-                    for (int i = Koniecmnozenia; i <= PoczatekMnozenia; i++)
-                    {
-                        Console.WriteLine();
-                        System.Threading.Thread.Sleep(4);
-
-                        for (int j = Koniecmnozenia; j <= PoczatekMnozenia; j++)
-                        {
-                            Console.Write((i * j).ToString() + "\t ");
-                            System.Threading.Thread.Sleep(4);
-                        }
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    //To Fix
+                    NumberOperations.Multiplication();
                     break;
-
 
                 case 4:
-
-                    // ------------------------- Liczby Pierwsze
-                    Console.WriteLine();
-                    Console.Clear();
-
-                    Console.WriteLine("Podaj Liczbe! \n");
-                    int LiczbaPierwsza = 0;
-                    
-                    Int32.TryParse(Console.ReadLine(), out LiczbaPierwsza);
-                    Console.WriteLine("\n to Liczby pierwsze do liczby " + LiczbaPierwsza);
-
-                    for (int counter = 0; counter <= LiczbaPierwsza; counter++)
-                    {
-                        bool notPrime = false;
-                        for (var i = 2; i <= counter; i++)
-
-                        {
-
-                            if (counter % i == 0 && i != counter)
-                            {
-                                notPrime = true;
-                            }
-                        }
-
-                        if (notPrime == false)
-                        {
-                            Console.Write(counter + " ");
-                            System.Threading.Thread.Sleep(10);
-                        }
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    NumberOperations.PrimeNumber();
                     break;
-
 
                 case 5:
-
-                    // ----------------------- Gra w Pytanie
-                    Console.Clear();
-                    Console.WriteLine("Gra w Pytanie!");
-
-                    Random rnd = new Random();
-                    int stre;
-
-                    int Liczba = rnd.Next(0, 100);
-                    Console.WriteLine("Podaj Liczbe!");
-
-                    for (int i = 0; i < 10; i++)
-                    {
-                        Int32.TryParse(Console.ReadLine(), out stre);
-
-                        if (stre == Liczba)
-                        {
-                            Console.WriteLine("Nice");
-                            Console.WriteLine("podjales tyle " + i + " prob");
-                            System.Threading.Thread.Sleep(1000);
-                            break;
-                        }
-
-                        if (stre > Liczba)
-                        {
-                            Console.WriteLine("mniej!");
-                        }
-
-                        if (stre < Liczba)
-                        {
-                            Console.WriteLine("wiecej!");
-                        }
-
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    Games.Numbers();
                     break;
-
 
                 case 6:
-                    // --------------- Dni przestepne
-                    Console.Clear();
-
-                    Console.WriteLine();
-                    Console.WriteLine("Dni przestepne!");
-
-                    int leap;
-                    int Year;
-
-                    Int32.TryParse(Console.ReadLine(), out Year);
-
-                    for (int i = 0; i <= 20; i++)
-                    {
-                        leap = 4 * i;
-                        leap += Year;
-                        System.Threading.Thread.Sleep(10);
-                        Console.WriteLine(leap + " ");
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    // to verify
+                    Games.Leapdays();
                     break;
-
 
                 case 7:
-
-                    // --------------- Max int in Array
-                    Console.Clear();
-                    Console.WriteLine();
-
-                    Console.WriteLine("Najwieksza w Array");
-                    int[] MaxArrayNumber = new int[12] { 1, 23, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-
-                    Console.Write(MaxArrayNumber.Max());
-                    Console.WriteLine();
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    NumberOperations.ArrayMax();
                     break;
-
 
                 case 8:
-                    // --------------- Write function that reverses a list, preferably in place.
-                    Console.Clear();
-
-                    string InputStringToReverse = "Hej kej Tej Lej";
-                    Console.WriteLine("przed zamiana\n" + InputStringToReverse);
-
-                    string resultString = string.Join(" ", InputStringToReverse.Split(' ')
-                        .Select(x => new String(x.Reverse().ToArray())));
-
-                    Console.WriteLine("po zamianie\n" + resultString);
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
-
+                    Stringoperations.ListReverse();
                     break;
 
-
-                // ------------ Element in a string
                 case 9:
-                    Console.Clear();
-
-                    var ElementinList = new List<string>
-                    {
-                        "kot",
-                        "pies",
-                        "cma"
-                    };
-
-                    if (ElementinList.Contains("pies"))
-                    {
-                        Console.WriteLine("dog was found");
-                    }
-
-                    if (ElementinList.Contains("CMA", StringComparer.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine("MOTH was found");
-                    }
-
-                    Console.WriteLine(ElementinList.Contains("ryba"));
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    Stringoperations.IsInList();
                     break;
 
-
-                // ---------------- Odd numbers in array
                 case 10:
-                    Console.Clear();
-
-                    int[] OddNumberInt = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-                    for (int i = 1; i <= OddNumberInt.Length; i += 2)
-                    {
-                        System.Threading.Thread.Sleep(10);
-                        Console.Write(OddNumberInt[i] + ", ");
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    NumberOperations.OddNumbers();
                     break;
 
-
-                // ---------------- Sum of array
                 case 11:
-                    Console.Clear();
-
-                    int[] SumOfArray = new int[12] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                    Console.WriteLine(SumOfArray.Sum());
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    NumberOperations.ArraySum();
                     break;
 
-
-                // --------------- Palindrome check
                 case 12:
-                    Console.Clear();
-
-                    Console.WriteLine("Write to check Palindrome!");
-
-                    String palindrome = Console.ReadLine();
-                    Console.WriteLine(palindrome.SequenceEqual(palindrome.Reverse()));
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    Stringoperations.Palindrome();
                     break;
 
 
-                // -------------- Prime Numbers
                 case 13:
-                    Console.Clear();
-
-                    Console.WriteLine("check square of number");
-                    int prime = 0;
-
-                    Int32.TryParse(Console.ReadLine(), out prime);
-                    int[] SquareAnumber = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, prime };
-
-                    for (int i = 0; i < SquareAnumber.Length; i++)
-                    {
-                        System.Threading.Thread.Sleep(10);
-                        SquareAnumber[i] *= SquareAnumber[i];
-                        Console.WriteLine(SquareAnumber[i]);
-                    }
-
-                    Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
-                    Console.ReadKey();
+                    NumberOperations.Prime();
                     break;
 
 
@@ -578,6 +336,8 @@ namespace Some_Learning_Stuff
                 // ---------------------- sum stuff to get result
                 case 20:
                     Console.Clear();
+                    Translator tr = new Translator();
+                    Translator.InitializeDictionary();
 
                     Console.WriteLine("What did you want to say?");
                     string userInput = Translator.GetUserInput();
