@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = Text_Game
+<<<<<<< HEAD
 build_property.ProjectDir = D:\Repo\C#\Text_Game\Text_Game\
+=======
+build_property.ProjectDir = D:\test_repo\C#\Text_Game\Text_Game\
+>>>>>>> 5417eb0d66268e51c5053ce3c83b3b181a63fecb
