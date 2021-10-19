@@ -11,3 +11,4 @@ D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp3.1\Some_
 D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp3.1\Some_Learning_Stuff.dll
 D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp3.1\Some_Learning_Stuff.pdb
 D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp3.1\Some_Learning_Stuff.genruntimeconfig.cache
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp3.1\Some_Learning_Stuff.csproj.AssemblyReference.cache

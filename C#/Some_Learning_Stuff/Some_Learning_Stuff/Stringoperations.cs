@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Some_Learning_Stuff
 {
-    class Stringoperations
+    class StringOperations
     {
         public static void ListReverse()
         {
@@ -14,7 +14,7 @@ namespace Some_Learning_Stuff
             Console.WriteLine("Podaj slowo do odwrocenia \n");
             string InputStringToReverse = Console.ReadLine();
 
-          //  string InputStringToReverse = "Hej kej Tej Lej";
+            //  string InputStringToReverse = "Hej kej Tej Lej";
             Console.WriteLine("przed zamiana \n" + InputStringToReverse);
 
             string resultString = string.Join(" ", InputStringToReverse.Split(' ').Select(x => new String(x.Reverse().ToArray())));
@@ -26,8 +26,8 @@ namespace Some_Learning_Stuff
 
 
         }
-    
-    public static void IsInList()
+
+        public static void IsInList()
         {
             Console.Clear();
 
@@ -38,15 +38,15 @@ namespace Some_Learning_Stuff
 
 
             Console.WriteLine("Podaje Liste");
-            for( int i = 0; i < ElementList.Count; i++)
+            for (int i = 0; i < ElementList.Count; i++)
             {
                 Console.Write(ElementList[i] + ", ");
             }
 
             Console.WriteLine("\nSprawdz czy jest w liscie");
             string ListCheck = Console.ReadLine();
-            
-            if(ElementList.Contains(ListCheck))
+
+            if (ElementList.Contains(ListCheck))
             {
                 Console.WriteLine(ListCheck + " zostal odnaleziony");
             }
@@ -58,9 +58,9 @@ namespace Some_Learning_Stuff
             Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
             Console.ReadKey();
         }
-    
 
-    public static void Palindrome()
+
+        public static void Palindrome()
         {
             Console.Clear();
 
@@ -72,7 +72,35 @@ namespace Some_Learning_Stuff
             Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
             Console.ReadKey();
         }
+
+
+        public static void StringAlteration()
+        {
+            Console.Clear();
+
+            List<int> ListAlternate = new List<int>()
+                    {
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    };
+
+            string[] AlternateLetters = { "a", "b", "c", "d", "e", "f" };
+
+            Console.WriteLine(ListAlternate + "\n" + AlternateLetters);
+
+            for (int i = 0; i < AlternateLetters.Length; i++)
+            {
+                System.Threading.Thread.Sleep(10);
+                Console.Write(ListAlternate[i] + ", " + AlternateLetters[i] + ", \n");
+            }
+
+            Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
+            Console.ReadKey();
+        }
     }
-    
 
 }

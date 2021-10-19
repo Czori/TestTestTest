@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Some_Learning_Stuff
 {
-    class Namechecking
+    class NameChecking
     {
         public static void CheckName(){
         Console.Clear();

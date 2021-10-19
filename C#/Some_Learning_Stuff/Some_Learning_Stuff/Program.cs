@@ -13,10 +13,10 @@ namespace Some_Learning_Stuff
 
         static void Main(string[] args)
         {
-            Namechecking nameChecking = new Namechecking();
+            NameChecking nameChecking = new NameChecking();
             NumberOperations numberOperations = new NumberOperations();
             Games games = new Games();
-            Stringoperations stringoperations = new Stringoperations();
+            StringOperations stringOperations = new StringOperations();
 
 
             Console.WriteLine(
@@ -56,7 +56,7 @@ namespace Some_Learning_Stuff
             switch (funkcja)
             {
                 case 1:                    
-                    Namechecking.CheckName();
+                    NameChecking.CheckName();
                     break;
 
                 case 2:
@@ -86,11 +86,11 @@ namespace Some_Learning_Stuff
                     break;
 
                 case 8:
-                    Stringoperations.ListReverse();
+                    StringOperations.ListReverse();
                     break;
 
                 case 9:
-                    Stringoperations.IsInList();
+                    StringOperations.IsInList();
                     break;
 
                 case 10:
@@ -102,7 +102,7 @@ namespace Some_Learning_Stuff
                     break;
 
                 case 12:
-                    Stringoperations.Palindrome();
+                    StringOperations.Palindrome();
                     break;
 
 

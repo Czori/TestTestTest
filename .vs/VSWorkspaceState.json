@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\C#",
+    "\\C#\\Some_Learning_Stuff",
+    "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff"
   ],
+  "SelectedNode": "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff",
   "PreviewInSolutionExplorer": false
 }

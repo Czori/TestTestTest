@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "zadanie-Games",
+      "appliesTo": "C#/Some_Learning_Stuff/Some_Learning_Stuff/Games.cs",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "zadanie-Games",
+      "appliesTo": "C#/Some_Learning_Stuff/Some_Learning_Stuff/Games.cs",
+      "type": "launch"
+    }
+  ]
+}
