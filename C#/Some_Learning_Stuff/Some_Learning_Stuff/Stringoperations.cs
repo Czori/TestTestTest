@@ -101,6 +101,138 @@ namespace Some_Learning_Stuff
             Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
             Console.ReadKey();
         }
+    
+    
+        public static void TwoListMerge()
+        {
+            Console.Clear();
+
+            List<int> simultaneousMergeAndSort(List<int> FirstList, List<int> SecondList)
+            {
+                int firstIndex = 0;
+                int secondIndex = 0;
+
+                int lengthOfList = FirstList.Count() + SecondList.Count();
+                List<int> newList = new List<int>(lengthOfList);
+
+                while (firstIndex < FirstList.Count() || secondIndex < SecondList.Count())
+                {
+                    System.Threading.Thread.Sleep(10);
+                    if (firstIndex != FirstList.Count() && secondIndex != SecondList.Count())
+                    {
+                        if (FirstList[firstIndex] <= SecondList[secondIndex])
+                        {
+                            newList.Add(FirstList[firstIndex]);
+                            firstIndex++;
+                        }
+                        else
+                        {
+                            newList.Add(SecondList[secondIndex]);
+                            secondIndex++;
+                        }
+                    }
+                    else if (secondIndex == SecondList.Count())
+                    {
+                        newList.Add(FirstList[firstIndex]);
+                        firstIndex++;
+                    }
+                    else
+                    {
+                        newList.Add(SecondList[secondIndex]);
+                        secondIndex++;
+                    }
+                }
+
+                return newList;
+            }
+
+            List<int> first = new List<int>() { 1, 4, 6, 8, 10 };
+            List<int> second = new List<int>() { 2, 3, 5, 7, 9 };
+
+            foreach (var num in simultaneousMergeAndSort(first, second))
+            {
+                System.Threading.Thread.Sleep(10);
+                Console.Write(num + ", "); // { 1, 2, 3, 4, 5, 6 }
+            }
+
+            Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
+            Console.ReadKey();
+
+        }
+    
+        public static void ArrayOrderChange()
+        {
+            Console.Clear();
+
+            void printArray(int[] Arraytest, int size)
+            {
+                for (int i = 0; i < size; i++)
+                    Console.Write(Arraytest[i] + " ");
+
+                System.Threading.Thread.Sleep(10);
+            }
+
+            void leftRotate(int[] Arraytest, int d,
+                                         int n)
+            {
+                for (int i = 0; i < d; i++)
+                    leftRotatebyOne(Arraytest, n);
+            }
+
+            void leftRotatebyOne(int[] Arraytest, int n)
+            {
+                int i, TempArray = Arraytest[0];
+                for (i = 0; i < n - 1; i++)
+                    Arraytest[i] = Arraytest[i + 1];
+
+                Arraytest[i] = TempArray;
+            }
+
+            Console.WriteLine("How much do you want to rotate?");
+            int Rotationint = 0;
+
+            Int32.TryParse(Console.ReadLine(), out Rotationint);
+            int[] RotateArray = { 1, 2, 3, 4, 5, 6, 7 };
+
+            leftRotate(RotateArray, Rotationint, 7);
+            printArray(RotateArray, 7);
+
+            Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
+            Console.ReadKey();
+        }
+    
+        public static void PigLatin()
+        {
+            Console.Clear();
+
+            string[] english1 = new string[4] { "hey", "look", "now", "shrek" };
+
+            for (int i = 0; i < english1.Length; i++)
+            {
+                String output = String.Join(" ", english1[i].Split(' '));
+                char[] test = new char[4] { ' ', ' ', ' ', ' ' };
+                foreach (char s in output)
+                {
+                    test[i] = output[0];
+                }
+                Console.Write((english1[i].Trim(test[i])) + output[0] + "ay ");
+
+            }
+
+            Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
+            Console.ReadKey();
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
 
 }

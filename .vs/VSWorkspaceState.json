@@ -3,10 +3,8 @@
     "",
     "\\C#",
     "\\C#\\Some_Learning_Stuff",
-    "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff",
-    "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff\\bin\\Debug",
-    "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff\\bin\\Debug\\netcoreapp3.1"
+    "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff"
   ],
-  "SelectedNode": "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff\\obj",
+  "SelectedNode": "\\C#\\Some_Learning_Stuff\\Some_Learning_Stuff.sln",
   "PreviewInSolutionExplorer": false
 }

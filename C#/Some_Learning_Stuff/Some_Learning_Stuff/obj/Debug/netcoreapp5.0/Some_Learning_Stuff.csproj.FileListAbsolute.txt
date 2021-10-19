@@ -1,0 +1,16 @@
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\Some_Learning_Stuff.exe
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\Some_Learning_Stuff.deps.json
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\Some_Learning_Stuff.runtimeconfig.json
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\Some_Learning_Stuff.runtimeconfig.dev.json
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\Some_Learning_Stuff.dll
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\ref\Some_Learning_Stuff.dll
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\bin\Debug\netcoreapp5.0\Some_Learning_Stuff.pdb
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.csproj.AssemblyReference.cache
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.AssemblyInfoInputs.cache
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.AssemblyInfo.cs
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.csproj.CoreCompileInputs.cache
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.dll
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\ref\Some_Learning_Stuff.dll
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.pdb
+D:\Repo\C#\Some_Learning_Stuff\Some_Learning_Stuff\obj\Debug\netcoreapp5.0\Some_Learning_Stuff.genruntimeconfig.cache

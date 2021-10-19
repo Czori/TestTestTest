@@ -181,5 +181,41 @@ namespace Some_Learning_Stuff
             Console.ReadKey();
         }
 
+        public static void NumbersInList()
+        {
+            Console.Clear();
+
+            List<double> numberToList(string num)
+            {
+                List<double> newList = new List<double>();
+                char[] tempArr;
+
+                tempArr = num.ToCharArray();
+                foreach (var value in tempArr)
+                {
+                    double digit = char.GetNumericValue(value);
+                    System.Threading.Thread.Sleep(10);
+
+                    newList.Add(digit);
+                }
+                return newList;
+            }
+
+            Console.WriteLine("Podaj Liczbe do zmiany na produkt");
+            string liczbad = Console.ReadLine();
+
+            foreach (var value in numberToList(liczbad))
+            {
+                Console.Write(value + ", ");
+            }
+
+            Console.WriteLine("\n Wciśnij klawisz aby wyjsc");
+            Console.ReadKey();
+        }
+
+
+
+
+
     }
 }
